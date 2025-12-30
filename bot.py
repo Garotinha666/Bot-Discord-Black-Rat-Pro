@@ -1,6 +1,6 @@
 import os
 import discord
-from key import token
+from key import get
 from datetime import datetime, timedelta
 
 intents = discord.Intents.default()
@@ -8,7 +8,7 @@ intents.message_content = True
 intents.members = True
 
 client = discord.Client(intents=intents)
-TOKEN = token.get('TOKEN')
+TOKEN = get('TOKEN')
 
 @client.event
 async def on_ready():
